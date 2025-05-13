@@ -1,0 +1,32 @@
+import pandas as pd
+
+def format_dataset_for_llm(csv_path: str, num_rows: int = 5) -> str:
+    # Load CSV
+    df = pd.read_csv(csv_path)
+    
+    # Infer schema
+    column_types = {col: str(df[col].dtype) for col in df.columns}
+    
+    # Generate formatted schema string
+    schema_lines = []
+    for col in df.columns:
+        dtype = column_types[col]
+        sample_vals = df[col].dropna().astype(str).unique()[:3]  # Get up to 3 unique values
+        sample_str = "; ".join(sample_vals)
+        schema_lines.append(f"- {col} ({dtype}) — e.g., {sample_str}")
+    
+    schema_str = "\n".join(schema_lines)
+    
+    # Get top sample rows
+    top_rows_str = df.head(num_rows).to_csv(index=False)
+
+    # Final formatted string for the prompt
+    formatted = f"""Dataset Overview:
+
+Columns and Types:
+{schema_str}
+
+Top {num_rows} Rows:
+{top_rows_str}
+"""
+    return formatted

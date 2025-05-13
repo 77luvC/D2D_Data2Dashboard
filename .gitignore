@@ -1,1 +1,12 @@
 .env
+
+# Ignore bin directory
+bin/
+
+# Ignore Python packages
+lib/python3.9/site-packages/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
