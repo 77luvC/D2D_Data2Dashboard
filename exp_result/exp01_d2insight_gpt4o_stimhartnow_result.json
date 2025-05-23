@@ -1,0 +1,85 @@
+{
+  "dataset_overview": {
+    "total_records": 15,
+    "columns": [
+      "Current Period",
+      "Customer ID",
+      "Periods Active",
+      "Current Customer (Y/N)",
+      "Period Acquired",
+      "Period Terminated",
+      "Acquisition Channel",
+      "Sector",
+      "Referred (Y/N)",
+      "Premium (Y/N)",
+      "Region",
+      "Co. Age",
+      "Size",
+      "No. Maker Contracts",
+      "No. Advanced Contracts",
+      "Revenue, Total",
+      "Maker Revenue",
+      "Advanced Revenue",
+      "Expected CLV"
+    ]
+  },
+  "key_insights": {
+    "customer_status": {
+      "current_customers": 1,
+      "terminated_customers": 14
+    },
+    "acquisition_channel": {
+      "external": 11,
+      "internal": 4
+    },
+    "sector": {
+      "aerospace": 15
+    },
+    "region_distribution": {
+      "southeast": 3,
+      "northeast": 5,
+      "midwest": 4,
+      "west": 3
+    },
+    "company_age_distribution": {
+      "0-5yrs": 8,
+      "6-10yrs": 4,
+      "10+yrs": 3
+    },
+    "size_distribution": {
+      "small": 9,
+      "medium": 5,
+      "large": 1
+    },
+    "contract_distribution": {
+      "maker_contracts": {
+        "total": 15,
+        "average_per_customer": 1
+      },
+      "advanced_contracts": {
+        "total": 12,
+        "average_per_customer": 0.8
+      }
+    },
+    "revenue_analysis": {
+      "total_revenue": 682000,
+      "average_revenue_per_customer": 45466.67,
+      "maker_revenue": 336000,
+      "advanced_revenue": 346000
+    },
+    "expected_clv_analysis": {
+      "total_expected_clv": 18000000,
+      "average_expected_clv_per_customer": 1200000
+    }
+  },
+  "observations": {
+    "customer_retention": "The majority of customers have terminated their contracts, with only one current customer remaining.",
+    "acquisition_preference": "Most customers were acquired through external channels.",
+    "sector_focus": "All customers belong to the aerospace sector, indicating a specialized focus.",
+    "regional_focus": "The customer base is fairly distributed across different regions, with a slight concentration in the Northeast.",
+    "company_age": "A significant portion of the companies are relatively new (0-5 years old).",
+    "contract_type": "There is a balanced distribution between maker and advanced contracts, with a slight preference for maker contracts.",
+    "revenue_distribution": "Revenue is almost evenly split between maker and advanced contracts, with a slight edge towards advanced revenue.",
+    "clv_expectation": "The expected customer lifetime value is high, suggesting that the company anticipates significant future revenue from its customers."
+  }
+}

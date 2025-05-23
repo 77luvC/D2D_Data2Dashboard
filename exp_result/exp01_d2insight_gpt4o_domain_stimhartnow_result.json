@@ -1,0 +1,58 @@
+{
+  "domain": "Customer Relationship Management in Aerospace Sector",
+  "insights": {
+    "customer_retention": {
+      "current_customers": 1,
+      "terminated_customers": 14,
+      "retention_rate": "6.67%",
+      "insight": "The majority of customers have terminated their contracts, indicating potential issues with customer retention strategies."
+    },
+    "acquisition_channels": {
+      "external_acquisitions": 11,
+      "internal_acquisitions": 4,
+      "insight": "Most customers are acquired through external channels, suggesting a reliance on external marketing or partnerships for customer acquisition."
+    },
+    "customer_demographics": {
+      "region_distribution": {
+        "Northeast": 5,
+        "Southeast": 3,
+        "Midwest": 4,
+        "West": 3
+      },
+      "company_age_distribution": {
+        "0-5yrs": 8,
+        "6-10yrs": 4,
+        "10+yrs": 3
+      },
+      "size_distribution": {
+        "Small": 10,
+        "Medium": 5,
+        "Large": 1
+      },
+      "insight": "The majority of customers are small companies, and a significant portion are relatively new (0-5 years old), indicating a potential focus on emerging businesses."
+    },
+    "financial_analysis": {
+      "average_revenue": 47000,
+      "average_maker_revenue": 21000,
+      "average_advanced_revenue": 26000,
+      "average_expected_clv": 1089643,
+      "insight": "The average expected customer lifetime value (CLV) is significantly higher than the average revenue, suggesting high future revenue potential from existing customers."
+    },
+    "contract_analysis": {
+      "maker_contracts": {
+        "total": 15,
+        "average_per_customer": 1
+      },
+      "advanced_contracts": {
+        "total": 13,
+        "average_per_customer": 0.87
+      },
+      "insight": "Customers tend to have a balanced mix of maker and advanced contracts, with a slight preference for maker contracts."
+    },
+    "premium_customers": {
+      "premium_customers": 1,
+      "non_premium_customers": 14,
+      "insight": "There is a very low number of premium customers, indicating a potential area for growth by converting more customers to premium status."
+    }
+  }
+}

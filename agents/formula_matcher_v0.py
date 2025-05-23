@@ -154,7 +154,7 @@ class FormulaAgent:
             self.status = "saved"
 
         return {
-            "formula": self.formula,
+            "formula": self.formula, #useless comment
             "mapping": self.mapping,
             "status": self.status,
             "failure_reason": self.failure_reason,
