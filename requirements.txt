@@ -54,3 +54,7 @@ tzdata==2025.2
 urllib3==2.4.0
 yarl==1.20.0
 zstandard==0.23.0
+ollama==0.3.0
+transformers==4.42.1
+google-generativeai==0.16.1
+ollama-python==0.2.0

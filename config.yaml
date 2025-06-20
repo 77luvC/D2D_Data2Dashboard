@@ -1,0 +1,10 @@
+llm:
+  backend: openai
+  model: gpt-4o
+  temperature: 0
+  openai_api_key: ""
+  google_api_key: ""
+  hf_token: ""
+  ollama_host: ""
+  think: false
+  lmstudio_url: "http://localhost:1234/v1"

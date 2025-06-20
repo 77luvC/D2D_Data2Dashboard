@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 # Make sure your .env has OPENAI_API_KEY=<your-key>
 load_dotenv()
 
-from langchain_openai import ChatOpenAI
+from config import get_default_llm
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables import RunnablePassthrough
 
@@ -38,13 +38,9 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 # --- 2.2  Chat model --------------------------------------
-llm = ChatOpenAI(
-    model_name="gpt-4o", 
-    temperature=0,
-    model_kwargs={"response_format": {"type": "json_object"}},
-    openai_api_key=os.getenv("OPENAI_API_KEY")
-)
-
+llm = get_default_llm(
+    model_kwargs={"response_format": {"type": "json_object"}}
+).with_config({"run_name": "default-llm"})
 # --- 2.3  Chain object ------------------------------------
 chain = prompt | llm  # (Prompt → ChatOpenAI)
 

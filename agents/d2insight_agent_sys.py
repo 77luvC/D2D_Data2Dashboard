@@ -12,7 +12,7 @@ from .utils import serialize_memory
 # Load environment variables from .env file
 load_dotenv()
 
-from langchain_openai import ChatOpenAI
+from config import get_default_llm
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langgraph.graph import StateGraph, START, END
@@ -30,12 +30,9 @@ class NumpyEncoder(json.JSONEncoder):
             return obj.tolist()
         return super(NumpyEncoder, self).default(obj)
 
-llm = ChatOpenAI(
-    model_name="gpt-4o", 
-    temperature=0,
-    model_kwargs={"response_format": {"type": "json_object"}},
-    openai_api_key=os.getenv("OPENAI_API_KEY")
-)
+llm = get_default_llm(
+    model_kwargs={"response_format": {"type": "json_object"}}
+).with_config({"run_name": "default-llm"})
 
 ############################################################
 # 1. LLM‑assisted DataProfiler                             #
